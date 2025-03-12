@@ -1,0 +1,116 @@
+#app {
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+main {
+    overflow: auto;
+    padding: 4rem;
+    width: 100%;
+
+    .main-container {
+        max-width: 40rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    h1 {
+        font: 600 1.5rem/1.25 var(--font-family);
+        margin-bottom: .5rem;
+    }
+
+     /* Estiliza a barra de rolagem */
+     &::-webkit-scrollbar {
+        width: 8px; 
+    }
+   
+    &::-webkit-scrollbar-track {
+        background: #faf4f43b; 
+        border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: rgb(47, 52, 90); 
+        border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgb(32, 53, 168); 
+    }
+}
+
+aside {
+    background: url("../assets/Background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem;
+
+
+    .aside-container {
+        header {
+            h2 {
+                color: rgb(209, 25, 117);
+            }
+            img {
+                width: 3rem;
+            }
+        }
+    }
+}
+
+h2 {
+    font: 600 2.5rem/1.25 var(--font-family);
+    margin-bottom: .5rem;
+
+    span {
+        color: var(--text-highlight)
+    }
+}
+
+
+@media (min-width: 800px) {
+
+    aside {
+        overflow-y: auto;
+    }
+
+}
+
+@media (max-width: 800px) {
+    #app {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    aside {
+        padding: 1.5rem 3rem;
+
+        h2 {
+            font: 600 1.5rem/1.25 var(--font-family);
+        }
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    aside {
+        padding: 1rem 2rem;
+
+        h2 {
+            font: 600 1rem/1.25 var(--font-family);
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+}
