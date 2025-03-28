@@ -12,7 +12,7 @@
     --text-sm: .875rem/1.4 var(var(--font-family));
 
     --background-color: #131516;
-    --color-text: #c8cdd0;
+    --color-text: #e6e6e6;
     --background-input: #1C1F21;
     --input-stroke: #363B40;
 
@@ -40,6 +40,8 @@ img {
 
 .flex {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 30px;
 }
 

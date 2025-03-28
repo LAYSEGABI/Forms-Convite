@@ -13,8 +13,17 @@ fieldset {
 }
 
 legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font: 600 1rem/1.25 var(--font-family);
     margin-bottom: 1.5rem;
+    gap: 10px;
+
+    img {
+        opacity: .7;
+        width: 25px;
+    }
 }
 
 fieldset + fieldset {
@@ -31,3 +40,4 @@ input {
     display: flex;
     gap: 1rem;
 }
+

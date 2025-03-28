@@ -1,5 +1,100 @@
+.tipo-wrapper {
+    display: flex;
+    flex-direction: column;
+}
 .radio-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
-    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgb(77, 77, 77);
+    border-radius: 10px;
+    height: fit-content;
+    padding: .2rem;
+    gap: 5px;
+}
+
+.radio-inner {
+
+    border-radius: .5rem;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+
+    padding: .5rem 1rem ;
+    position: relative;
+
+    color: rgb(177, 177, 177);
+
+    & input,
+    & input:focus,
+    & input:hover {
+        all: unset;
+
+        position: absolute;
+        inset: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    img {
+        width: 24px;
+    }
+
+    &:hover,
+    &:focus-within {
+background-color: rgba(128, 128, 128, 0.075);
+color: rgb(216, 216, 216);
+
+        & .radio-image {
+            background-image: url(../../assets/Icons/radio-hover.svg);
+        }
+
+    }
+
+    &:has(:checked) {
+       background-color: rgba(10, 36, 70, 0.432);
+color: white;
+
+
+    }
+
+
+    &:first-child:has(:checked) img {
+        content: url("../../assets/icons/building-hover.svg");
+    }
+
+    &:last-child:has(:checked) img {
+        content: url("../../assets/icons/video-hover.svg");
+    }
+
+}
+
+
+.radio-wrapper-tema {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.radio-inner-tema {
+    background-color: red;
+
+    
+    & input,
+    & input:focus,
+    & input:hover {
+        all: unset;
+
+        position: absolute;
+        inset: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    img {
+        width: 100px;
+    }
+
 }
