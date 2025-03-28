@@ -25,23 +25,23 @@ main {
         margin-bottom: 2rem;
     }
 
-     /* Estiliza a barra de rolagem */
-     &::-webkit-scrollbar {
-        width: 8px; 
+    /* Estiliza a barra de rolagem */
+    &::-webkit-scrollbar {
+        width: 8px;
     }
-   
+
     &::-webkit-scrollbar-track {
-        background: #faf4f43b; 
+        background: #faf4f43b;
         border-radius: 4px;
     }
-    
+
     &::-webkit-scrollbar-thumb {
-        background: rgb(55, 116, 185); 
+        background: rgb(55, 116, 185);
         border-radius: 4px;
     }
-    
+
     &::-webkit-scrollbar-thumb:hover {
-        background: rgb(32, 53, 168); 
+        background: rgb(32, 53, 168);
     }
 }
 
@@ -58,6 +58,7 @@ aside {
             h2 {
                 color: rgb(209, 25, 117);
             }
+
             img {
                 width: 3rem;
             }
@@ -75,42 +76,42 @@ h2 {
 }
 
 
-@media (min-width: 800px) {
 
-    aside {
-        overflow-y: auto;
-    }
 
-}
+@media (max-width: 900px) {
 
-@media (max-width: 800px) {
     #app {
         display: flex;
-        flex-direction: column-reverse;
-    }
+        flex-direction: column;
 
-    aside {
-        padding: 1.5rem 3rem;
+        aside {
+            height: 10%;
+            display: flex;
+            align-items: center;
 
-        h2 {
-            font: 600 1.5rem/1.25 var(--font-family);
+            header {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+
+                h2 {
+                    color: white;
+                }
+
+                p {
+                    display: none;
+                }
+            }
         }
     }
 
 }
 
-@media (max-width: 400px) {
 
-    aside {
-        padding: 1rem 2rem;
+@media (max-width: 600px) {
 
-        h2 {
-            font: 600 1rem/1.25 var(--font-family);
-        }
-
-        p {
-            display: none;
-        }
+    main {
+        padding: 2rem;
     }
 
 }

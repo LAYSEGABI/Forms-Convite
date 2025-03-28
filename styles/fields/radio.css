@@ -23,6 +23,7 @@
     align-items: flex-start;
     justify-content: center;
     gap: 10px;
+    width: 100%;
 
     padding: .5rem 1rem;
     position: relative;
@@ -133,6 +134,21 @@
 
     img {
         width: 150px;
+    }
+
+}
+
+
+
+
+@media (max-width: 380px) {
+
+    .radio-wrapper-tema {
+        gap: 5px;
+    }
+    .radio-inner-tema {
+        width: 40%;
+
     }
 
 }

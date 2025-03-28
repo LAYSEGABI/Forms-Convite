@@ -3,6 +3,7 @@
 .color-picker {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     align-items: center;
@@ -40,4 +41,12 @@
     height: 100%;
     border-radius: 50%;
     display: block;
+}
+
+
+@media (max-width: 600px) {
+
+.color-picker {
+    justify-content: left;
+}
 }
