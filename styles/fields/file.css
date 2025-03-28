@@ -1,0 +1,61 @@
+/*input[type="file"] {
+    display: none;
+}
+
+ Criando um botão estilizado 
+.file {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+ Efeito hover 
+.file:hover {
+    background-color: #0056b3;
+}
+*/
+
+
+.file {
+    border: 2px dashed transparent;
+    outline: 1px dashed var(--stroke-default);
+    border-radius: .25rem;
+    background-color: rgba(68, 67, 67, 0.315);
+
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+
+    padding: .5rem 1rem;
+    position: relative;
+    input {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        opacity: 0;
+    }
+
+    img {
+        width: 20px;
+    }
+
+    p {
+        color: #A8A29E;
+    }
+
+    &:hover {
+        outline-width: 0;
+        border-width: 2px;
+        border-color: var(--stroke-highlight);
+        background-color: var(--surface-secondary);
+
+    }
+}
